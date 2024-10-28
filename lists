@@ -1,0 +1,30 @@
+# Initialize an empty list
+my_list = []
+
+# Read the number of commands
+n = int(input().strip())
+
+# Loop through each command and execute it
+for _ in range(n):
+    # Read the command and arguments
+    command = input().strip().split()
+
+    # Perform the corresponding operation
+    if command[0] == "insert":
+        i = int(command[1])
+        e = int(command[2])
+        my_list.insert(i, e)
+    elif command[0] == "print":
+        print(my_list)
+    elif command[0] == "remove":
+        e = int(command[1])
+        my_list.remove(e)
+    elif command[0] == "append":
+        e = int(command[1])
+        my_list.append(e)
+    elif command[0] == "sort":
+        my_list.sort()
+    elif command[0] == "pop":
+        my_list.pop()
+    elif command[0] == "reverse":
+        my_list.reverse()
