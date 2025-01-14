@@ -1,0 +1,11 @@
+# Step 1: Input the number of elements in the tuple (though we don't really need to use it)
+n = int(input())
+
+# Step 2: Input the space-separated integers and create the tuple
+t = tuple(map(int, input().split()))
+
+# Step 3: Compute the hash of the tuple
+result = hash(t)
+
+# Step 4: Print the result
+print(result)
