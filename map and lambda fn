@@ -1,0 +1,14 @@
+# Lambda function to cube the input
+cube = lambda x: x ** 3
+
+# Function to generate Fibonacci sequence up to n
+def fibonacci(n):
+    fib_seq = [0, 1]  # Starting values for Fibonacci sequence
+    for i in range(2, n):
+        fib_seq.append(fib_seq[-1] + fib_seq[-2])  # Add the next Fibonacci number
+    return fib_seq[:n]  # Return the Fibonacci sequence up to the nth number
+
+
+if __name__ == '__main__':
+    n = int(input())
+    print(list(map(cube, fibonacci(n))))
